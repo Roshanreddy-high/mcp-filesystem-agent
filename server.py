@@ -5,7 +5,9 @@ import os
 import shutil
 import time
 from pathlib import Path
-from typing import Any, TypedDict
+from typing import Any
+
+from typing_extensions import TypedDict
 
 from mcp.server.fastmcp import FastMCP
 
