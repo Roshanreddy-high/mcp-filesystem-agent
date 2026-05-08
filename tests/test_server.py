@@ -6,7 +6,10 @@ import unittest
 from pathlib import Path
 
 # Add parent directory to path so we can import server module
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Use absolute path for reliability across different working directories
+test_dir = Path(__file__).parent.resolve()
+project_root = test_dir.parent.resolve()
+sys.path.insert(0, str(project_root))
 
 import server
 

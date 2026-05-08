@@ -29,5 +29,6 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: .
+          MCP_ALLOWED_ROOT: ${{ github.workspace }}
         run: |
           python -m unittest discover -s tests -p "test_*.py" -v
