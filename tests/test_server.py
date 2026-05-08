@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+
+# Add parent directory to path so we can import server module
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import server
 
