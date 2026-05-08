@@ -41,7 +41,8 @@ class ServerToolTests(unittest.TestCase):
         self.assertEqual(result["error"]["code"], "invalid_input")
 
     def test_path_sandbox_blocks_escape(self) -> None:
-        result = server.read_file("..\\outside.txt")
+        # Use forward slash which works on both Windows and Linux
+        result = server.read_file("../outside.txt")
         self.assertFalse(result["success"])
         self.assertEqual(result["error"]["code"], "permission_denied")
 
