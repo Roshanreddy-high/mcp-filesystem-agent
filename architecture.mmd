@@ -1,0 +1,19 @@
+
+flowchart LR
+    U["User"]
+    C["Client"]
+    O["Ollama"]
+    S["Transport"]
+    SRV["Server"]
+    T["Tools"]
+    FS["Filesystem"]
+    LOGS["Logs"]
+    
+    U -->|input| C
+    C -->|chat| O
+    C -->|stdio| S
+    S -->|stdio| SRV
+    SRV --> T
+    T --> FS
+    SRV -->|audit| LOGS
+    SRV -->|result| C
