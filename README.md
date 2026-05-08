@@ -42,10 +42,7 @@ mcp/
 ├── README.md              # This file
 ├── logs/                  # Audit logs directory
 ├── tests/                 # Test suite
-│   └── test_server.py
-└── tools/                 # Utility tools
-    ├── analyse.py
-    └── read_file.py
+    └── test_server.py
 ```
 
 ## Requirements
